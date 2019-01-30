@@ -1,5 +1,4 @@
 //filter dictionary to keep just the words we want
-const MAX_WORD_LENGTH = 20
 const { PerformanceObserver, performance } = require('perf_hooks')
 
 var fs = require('fs')
@@ -18,7 +17,7 @@ function filterDictionary(callback){
 
 		lineReader.on('line', function (line) {
 			line = line.toLowerCase();
-			if(/^([a-z]{2,MAX_WORD_LENGTH})$/.test(line)){
+			if(/^([a-z]{2,9})$/.test(line)){
 				fs.write(fd, line+'\r\n', function (err) {
 					if (err) throw err;
 				});

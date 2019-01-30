@@ -33,7 +33,7 @@ function saveAnagramDictionaryToFile(callback){
 			console.log(getWordValue('apple'))
 			var t1 = performance.now()
 
-			console.log("loaded words to dictionary" + (t1 - t0).toFixed(3) + ' milliseconds.')
+			console.log("loaded words to dictionary in " + (t1 - t0).toFixed(3) + ' milliseconds.')
 			console.log("loading subAnagrams")
 			var t2 = performance.now()
 			
@@ -52,16 +52,15 @@ function saveAnagramDictionaryToFile(callback){
 				}
 			}
 			var t3 = performance.now()
-			console.log("loaded subAnagrams" + (t3 - t2).toFixed(3) + ' milliseconds.')
+			console.log("loaded subAnagrams in " + (t3 - t2).toFixed(3) + ' milliseconds.')
 
 			var strAnagrams = JSON.stringify(anagramDictionary)
 
 			fs.writeFile(anagramDictionaryFile, strAnagrams, function(err){
 				if(err) throw err
 				console.log('saved file')
-			})
-
-			typeof callback === 'function' && callback()
+				typeof callback === 'function' && callback()
+			})	
 		})
 	}
 }
