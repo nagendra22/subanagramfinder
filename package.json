@@ -1,0 +1,24 @@
+{
+  "name": "subanagramfinder",
+  "version": "1.0.0",
+  "description": "Find sub-anagrams given a jumbled word",
+  "main": "app.js",
+  "dependencies": {
+    "d3-node": "^2.1.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagendra22/subanagramfinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nagendra22/subanagramfinder/issues"
+  },
+  "homepage": "https://github.com/nagendra22/subanagramfinder#readme"
+}

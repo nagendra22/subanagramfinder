@@ -81,3 +81,7 @@ typings/
 
 # mac
 .DS_Store
+
+#generated files
+anagram-dictionary.json
+words-filtered.txt
