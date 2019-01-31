@@ -4,7 +4,6 @@
   "description": "Find sub-anagrams given a jumbled word",
   "main": "app.js",
   "dependencies": {
-    "d3-node": "^2.1.0",
     "express": "^4.16.4"
   },
   "devDependencies": {},
