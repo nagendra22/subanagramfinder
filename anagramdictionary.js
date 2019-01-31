@@ -52,7 +52,7 @@ function saveAnagramDictionaryToFile(callback){
 					}
 				}
 			}
-			var t3 = performance.now()
+//			var t3 = performance.now()
 //			console.log("loaded subAnagrams in " + (t3 - t2).toFixed(3) + ' milliseconds.')
 			console.log("loaded subAnagrams")
 
