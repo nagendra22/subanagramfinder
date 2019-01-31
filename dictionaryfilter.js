@@ -1,5 +1,5 @@
 //filter dictionary to keep just the words we want
-const { PerformanceObserver, performance } = require('perf_hooks')
+//const { PerformanceObserver, performance } = require('perf_hooks')
 
 var fs = require('fs')
 var words = 'dictionary/words.txt'
@@ -13,7 +13,7 @@ function filterDictionary(callback){
 		fd = fs.openSync(wordsFiltered, 'w')
 
 		console.log('filtering dictionary')
-		var t0 = performance.now()
+//		var t0 = performance.now()
 
 		lineReader.on('line', function (line) {
 			line = line.toLowerCase();
@@ -24,9 +24,10 @@ function filterDictionary(callback){
 			}
 		});
 		
-		var t1 = performance.now()
+//		var t1 = performance.now()
 
-		console.log('filtered dictionary in ' + (t1 - t0).toFixed(3) + ' milliseconds.')
+//		console.log('filtered dictionary in ' + (t1 - t0).toFixed(3) + ' milliseconds.')
+		console.log('filtered dictionary')
 	}
 
 	typeof callback === 'function' && callback()

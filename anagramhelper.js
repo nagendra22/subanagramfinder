@@ -1,5 +1,3 @@
-const { PerformanceObserver, performance } = require('perf_hooks')
-
 var dictFilter = require('./dictionaryfilter')
 var anagramDictionary = require('./anagramdictionary')
 

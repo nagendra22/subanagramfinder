@@ -1,4 +1,4 @@
-const { PerformanceObserver, performance } = require('perf_hooks')
+//const { PerformanceObserver, performance } = require('perf_hooks')
 var fs = require('fs')
 
 const combinations = require('./combinations')
@@ -17,7 +17,7 @@ function saveAnagramDictionaryToFile(callback){
 	}
 	else{
 		console.log("loading words to dictionary")
-		var t0 = performance.now()
+//		var t0 = performance.now()
 		fs.readFile(words, 'utf8', function(err, contents) {
 			if(err) throw err
 			var contentSplitted = contents.split('\r\n');
@@ -31,11 +31,12 @@ function saveAnagramDictionaryToFile(callback){
 				}
 			}
 			console.log(getWordValue('apple'))
-			var t1 = performance.now()
+//			var t1 = performance.now()
 
-			console.log("loaded words to dictionary in " + (t1 - t0).toFixed(3) + ' milliseconds.')
+//			console.log("loaded words to dictionary in " + (t1 - t0).toFixed(3) + ' milliseconds.')
+			console.log("loaded words to dictionary")
 			console.log("loading subAnagrams")
-			var t2 = performance.now()
+//			var t2 = performance.now()
 			
 			for(var key in anagramDictionary){
 				var word = anagramDictionary[key]['words'][0]
@@ -52,7 +53,8 @@ function saveAnagramDictionaryToFile(callback){
 				}
 			}
 			var t3 = performance.now()
-			console.log("loaded subAnagrams in " + (t3 - t2).toFixed(3) + ' milliseconds.')
+//			console.log("loaded subAnagrams in " + (t3 - t2).toFixed(3) + ' milliseconds.')
+			console.log("loaded subAnagrams")
 
 			var strAnagrams = JSON.stringify(anagramDictionary)
 
